@@ -31,7 +31,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
       String data = response.body;
       print(data);
     } else {
-      print('Test');
+      print(response.statusCode);
     }
   }
 
