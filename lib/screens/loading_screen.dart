@@ -4,6 +4,8 @@ import 'package:clima/services/location.dart';
 
 import 'package:http/http.dart' as http;
 
+import 'dart:convert';
+
 class LoadingScreen extends StatefulWidget {
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
@@ -30,6 +32,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
     if (response.statusCode == 200) {
       String data = response.body;
       print(data);
+
+      jsonDecode(data);
     } else {
       print(response.statusCode);
     }
